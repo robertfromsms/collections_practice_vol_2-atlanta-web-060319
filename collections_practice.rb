@@ -38,7 +38,9 @@ end
 def count_elements(array)
   answer = []
   array.uniq.each {|uni_ele|
-    answer.push({uni_ele, count: array.count(uni_ele)})
+    uni_ele.each {|key, value|
+      answer.push({key => value, :count => array.count(uni_ele)})
+    }
   }
   return answer
 end
