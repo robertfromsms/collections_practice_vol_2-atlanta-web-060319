@@ -49,7 +49,7 @@ end
 def merge_data(keys, data)
   keys.each {|person|
     data.each {|dude|
-      if dude.has_key?[person[:first_name]]
+      if dude.has_key?(person[:first_name])
         dude[person[:first_name]].each {|trait, value|
           person[trait] = value
         }
