@@ -58,3 +58,13 @@ def merge_data(keys, data)
   }
   return keys
 end
+
+def find_cool(thing)
+  answer = []
+  thing.each {|person|
+    if person[:temperature] == "cool"
+      answer.push(person)
+    end
+  }
+  return answer
+end
