@@ -34,3 +34,11 @@ def remove_non_strings(array)
   }
   return answer
 end
+
+def count_elements(array)
+  answer = []
+  array.uniq.each {|uni_ele|
+    answer.push({uni_ele, count: array.count(uni_ele)})
+  } 
+  return answer
+end
