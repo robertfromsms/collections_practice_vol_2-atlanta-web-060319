@@ -12,7 +12,7 @@ end
 def contain_a(array)
   answer = []
   array.each {|element|
-    answer.push(element) if element.split("").include?.include?("a")
+    answer.push(element) if element.split("").include?("a")
   }
   return answer
 end
