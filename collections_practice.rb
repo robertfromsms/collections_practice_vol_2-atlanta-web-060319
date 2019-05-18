@@ -44,3 +44,17 @@ def count_elements(array)
   }
   return answer
 end
+
+
+def merged_data(keys, data)
+  keys.each {|person|
+    data.each {|dude|
+      if dude.has_key?[person[:first_name]]
+        dude[person[:first_name]].each {|trait, value|
+          person[trait] = value
+        }
+      end
+    }
+  }
+  return keys
+end
