@@ -24,3 +24,13 @@ def first_wa(array)
     end
   }
 end
+
+def remove_non_strings(array)
+  answer = []
+  array.each {|element|
+    if element.class == String
+      answer.push(element)
+    end
+  }
+  return answer
+end
