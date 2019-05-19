@@ -68,3 +68,22 @@ def find_cool(thing)
   }
   return answer
 end
+
+def organize_schools(schools)
+  locations = []
+  organized_school_hash = {}
+  schools.each {|school, char|
+    locations.push(char[:location])
+  }
+  locations.uniq.each {|location|
+    organized_school_hash[location] = []
+  }
+  organized_school_hash.each {|location, school_list|
+    schools.each {|school, char|
+      if char[:location] == location
+        school_list.push(school)
+      end
+    }
+  }
+  return organized_school_hash
+end
